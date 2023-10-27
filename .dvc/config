@@ -1,0 +1,4 @@
+[core]
+    remote = dagshub
+['remote "dagshub"']
+    url = https://dagshub.com/Ivanrs297/micai-2023-mlops-tutorial.git
