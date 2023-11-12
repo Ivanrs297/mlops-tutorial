@@ -1,4 +1,7 @@
 [core]
-    remote = dagshub
+    remote = origin
 ['remote "dagshub"']
     url = https://dagshub.com/Ivanrs297/micai-2023-mlops-tutorial.git
+['remote "origin"']
+    url = s3://dvc
+    endpointurl = https://dagshub.com/Ivanrs297/micai-2023-mlops-tutorial.s3

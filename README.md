@@ -58,3 +58,35 @@ A case study on the use of MLOps in medical imaging offers helpful advice. An ex
 
 
 --------
+
+# Notes
+
+## For DagsHub and DVC
+You need to get your `repo-owner`, `repo-name` and `token` from DagsHub.
+```bash
+dvc remote add -f origin s3://dvc
+dvc remote modify origin endpointurl https://dagshub.com/{repo-owner}/{repo-name}.s3
+```
+
+**Set DagsHub storage as default DVC remote**
+```bash
+dvc remote default origin
+```
+
+### DVC Credentials
+```
+dvc remote modify --local origin access_key_id {token}
+dvc remote modify --local origin secret_access_key {token}
+```
+Then you inside `.dvc/config.local` should see your credential
+
+### Push to DVC
+Example for `data/raw/iris.csv`
+
+```bash
+dvc add data/raw/iris.csv
+dvc push -r origin
+git add data/raw/iris.csv.dvc .gitignore
+git commit -m "Adding example data"
+git push
+```
