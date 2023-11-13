@@ -74,7 +74,7 @@ dvc remote default origin
 ```
 
 ### DVC Credentials
-```
+```bash
 dvc remote modify --local origin access_key_id {token}
 dvc remote modify --local origin secret_access_key {token}
 ```
@@ -90,3 +90,5 @@ git add data/raw/iris.csv.dvc .gitignore
 git commit -m "Adding example data"
 git push
 ```
+
+

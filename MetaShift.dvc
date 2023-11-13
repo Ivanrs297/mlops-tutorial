@@ -1,0 +1,5 @@
+outs:
+- md5: 7fbac0f7d11b3495845d334290f6378d.dir
+  size: 781989845
+  nfiles: 5776
+  path: data/raw/MetaShift
